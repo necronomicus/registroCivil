@@ -7,11 +7,16 @@ public abstract class persona {
     private String domicilio;
     private int dni;
     private int sexo;
+    private int dia;
+    private int mes;
+    private int año;
+    private String edad;
 
     private Calendar cal = new GregorianCalendar();
 
-    abstract String calcularEdad(int dia, int mes, int año);
-    abstract  String toString(String nombre, String domicilio, int dni, int sexo);
+    public abstract String calcularEdad(int dia, int mes, int año);
+    public abstract String toString();
+    public abstract String toStringSexo();
 
 
 
@@ -56,5 +61,37 @@ public abstract class persona {
 
     public void setCal(Calendar cal) {
         this.cal = cal;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public int getDia() {
+        return dia;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
     }
 }

@@ -1,18 +1,16 @@
 import java.util.Calendar;
 
+public class femenino extends  persona {
+    @Override
+    public String toString()
+    {
 
-public class  masculino extends persona {
-
-   @Override
-   public String toString()
-   {
-
-       return "Nombre: "+ getNombre()+"\n"+ "D.N.I: " + getDni() +"\n"+ "Sexo: " + toStringSexo()
-               +"\n"+ "Edad: " + getEdad()   ;
-   }
+        return "Nombre: "+ getNombre()+"\n"+ "D.N.I: " + getDni() +"\n"+ "Sexo: " + toStringSexo()
+                +"\n"+ "Edad: " + getEdad();
+    }
 
     @Override
-    public String calcularEdad(int dia, int mes, int año) {
+    public  String calcularEdad(int dia, int mes, int año) {
         int añoActual = getCal().get(Calendar.YEAR);
         int mesActual = getCal().get(Calendar.MONTH);
         int diaActual = getCal().get(Calendar.DAY_OF_MONTH);
@@ -26,7 +24,7 @@ public class  masculino extends persona {
         return resultadoAño + " años, " + resultadoMes + " meses, " + resultadoDia + "dias";
     }
 
-    public masculino(String nombre, String domicilio, int dni, int sexo, int dia, int mes, int año)
+    public femenino(String nombre, String domicilio, int dni, int sexo, int dia, int mes, int año)
     {
         setNombre(nombre);
         setDomicilio(domicilio);
@@ -42,11 +40,11 @@ public class  masculino extends persona {
         {
 
             case 1: r = "femenino";
-            break;
+                break;
             case 2: r =   "Masculino";
-            break;
+                break;
             case 3: r = "Otros";
-            break;
+                break;
             default: return "Wat";
 
         }
